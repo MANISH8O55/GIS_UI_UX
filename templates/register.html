@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration</title>
+  <link rel="stylesheet" href="" />
+  <link rel="stylesheet" href="{% static 'CSS/register.css' %}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="register" method="post">
+        {% csrf_token %}
+
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First name</span>
+            <input type="text" name="first_name" placeholder="Enter your name" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Last name</span>
+            <input type="text" name="last_name" placeholder="Enter your name" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" name="username" placeholder="Enter your username" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name="email" placeholder="Enter your email" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" name="password1" placeholder="Enter your password" required />
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" name="password2" placeholder="Confirm your password" required />
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Register" />
+        </div>
+      </form>
+      <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

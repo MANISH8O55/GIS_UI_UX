@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <!----<title>Login Form Design | CodeLab</title>---->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{% static 'CSS/login_style.css' %}">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="title">Login Form</div>
+    <form action="login" method="post">
+      {% csrf_token %}
+      <div class="field">
+        <input type="text" name="username" placeholder="username"><br>
+      </div>
+      <div class="field">
+        <input type="password" name="password" placeholder="password"><br>
+      </div>
+      <div class="content">
+        <div class="checkbox">
+          <input type="checkbox" id="remember-me">
+          <label for="remember-me">Remember me</label>
+        </div>
+        <div class="pass-link"><a href="#">Forgot password?</a></div>
+      </div>
+      <div class="field">
+        <input type="submit" value="Login">
+      </div>
+      <div class="signup-link">Not a member? <a href="/accounts/register">Signup now</a></div>
+    </form>
+  </div>
+</body>
+
+
+
+<div>
+  {% for message in messages %}
+  <h3> {{message}} </h3>
+  {% endfor %}
+</div>
+
+</body>
+
+</html>

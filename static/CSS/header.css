@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+.header {
+  padding:18px;
+  background: #1e1e1e;
+  text-align: center;
+  font-size: 40px;
+}
+
+.header .i {
+  position: relative;
+  left: 400px;
+  top: -60px;
+}
+
+.header .name {
+  font-family: "Franklin Gothic Medium";
+  color: aqua;
+  font-size: 25px;
+  position: absolute;
+  height: 10%;
+  top: 33px;
+  left: 650px;
+}
+
+.greeting {
+  color: aqua;
+  font-size: 20px;
+  position: absolute;
+  left: 1380px;
+  top: 35px;
+}
+
+.header-right a {
+  position: relative;
+  padding: 5px;
+  left: 560px;
+  top: -7px;
+  font-size: 20px;
+  color: aqua;
+  pointer-events: initial;
+  cursor: pointer;
+}
+
+.header-right .highlighted:hover {
+  color: whitesmoke;
+  pointer-events: initial;
+  cursor: pointer;
+}

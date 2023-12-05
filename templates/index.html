@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Box Icons  -->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <!-- Styles  -->
+  <link rel="shortcut icon" href="assets/img/kxp_fav.png" type="image/x-icon" />
+
+  <link rel="stylesheet" href="{% static  'libs/v6.15.1-dist/ol.css'  %}" />
+  <link rel="stylesheet" href="{% static 'CSS/basemap.css' %}" />
+
+  <link rel="stylesheet" href="{% static 'CSS/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'CSS/header.css' %}" />
+
+  <title>{% block title %}GEO{% endblock %}</title>
+</head>
+
+<body>
+  {% include "components/header.html" %}
+  <div class="sidebar close">
+    <!-- ========== Logo ============  -->
+    <a href="#" class="logo-box">
+      <i class="bx bxl-xing"></i>
+      <div class="logo-name">GIS</div>
+    </a>
+
+    <!-- ============= Home Section =============== -->
+    <section class="home">
+      <div class="toggle-sidebar">
+        <i class="bx bx-menu"></i>
+        <div class="text"></div>
+      </div>
+    </section>
+
+    <!-- ========== List ============  -->
+    <ul class="sidebar-list">
+      <!-- -------- Non Dropdown List Item ------- -->
+      <li>
+        <div class="title">
+          <a href="#" class="link">
+            <i class="bx bx-grid-alt"></i>
+            <span class="name">Dashboard</span>
+          </a>
+          <!-- <i class='bx bxs-chevron-down'></i> -->
+        </div>
+        <div class="submenu">
+          <a href="#" class="link submenu-title">Dashboard</a>
+          <!-- submenu links here  -->
+        </div>
+      </li>
+
+      <!-- -------- Dropdown List Item ------- -->
+      <li class="dropdown">
+        <div class="title">
+          <a href="#" class="link">
+            <i class="bx bxs-layer"></i>
+            <span class="name">Layer List</span>
+          </a>
+          <i class="bx bxs-chevron-down"></i>
+        </div>
+
+        <div class="submenu">
+          <a href="#" class="link submenu-title">Layer List</a>
+          <a href="#" class="link">Administration</a>
+          <a href="#" class="link">Others</a>
+          <a href="#" class="link">Nabard</a>
+        </div>
+      </li>
+
+      <!-- -------- Dropdown List Item ------- -->
+      <li class="dropdown">
+        <div class="title">
+          <a href="#" class="link">
+            <i class="bx bxs-layer-plus"></i>
+            <span class="name">Add Layer</span>
+          </a>
+          <i class="bx bxs-chevron-down"></i>
+        </div>
+        <div class="submenu">
+          <a href="#" class="link submenu-title">Add Layer</a>
+          <a href="#" class="link">GeoserverURL</a>
+          <a href="#" class="link">Username_(If_required)</a>
+          <a href="#" class="link">Action</a>
+        </div>
+      </li>
+
+      <!-- -------- Non Dropdown List Item ------- -->
+      <li>
+        <div class="title">
+          <a href="#" class="link">
+            <i class="bx bx-cloud"></i>
+            <span class="name">Weather</span>
+          </a>
+          <!-- <i class='bx bxs-chevron-down'></i> -->
+        </div>
+        <div class="submenu">
+          <a href="#" class="link submenu-title">Weather</a>
+          <!-- submenu links here  -->
+        </div>
+      </li>
+
+      <!-- -------- Non Dropdown List Item ------- -->
+      <li>
+        <div class="title">
+          <a href="#" class="link">
+            <i class="bx bx-edit-alt"></i>
+            <span class="name">Measurement</span>
+          </a>
+          <!-- <i class='bx bxs-chevron-down'></i> -->
+        </div>
+        <div class="submenu">
+          <a href="#" class="link submenu-title">Measurement</a>
+          <!-- submenu links here  -->
+        </div>
+      </li>
+
+      <!-- -------- Dropdown List Item ------- -->
+      <li class="dropdown">
+        <div class="title">
+          <a href="#" class="link">
+            <i class="bx bxs-cog"></i>
+            <span class="name">QueryBuilder</span>
+          </a>
+          <i class="bx bxs-chevron-down"></i>
+        </div>
+        <div class="submenu">
+          <a href="#" class="link submenu-title">QueryBuilder</a>
+          <a href="#" class="link">Action</a>
+          <a href="#" class="link">Action</a>
+          <a href="#" class="link">Action</a>
+        </div>
+      </li>
+
+      <!-- -------- Non Dropdown List Item ------- -->
+      <li>
+        <div class="title">
+          <a href="#" class="link">
+            <i class="bx bx-search-alt-2"></i>
+            <span class="name">Search</span>
+          </a>
+          <!-- <i class='bx bxs-chevron-down'></i> -->
+        </div>
+        <div class="submenu">
+          <a href="#" class="link submenu-title">Search</a>
+          <!-- submenu links here  -->
+        </div>
+      </li>
+
+      <!-- -------- Non Dropdown List Item ------- -->
+
+      <!-- -------- Non Dropdown List Item ------- -->
+      <li>
+        <div class="title">
+          <a href="#" class="link">
+            <i class="bx bx-cog"></i>
+            <span class="name">Settings</span>
+          </a>
+          <!-- <i class='bx bxs-chevron-down'></i> -->
+        </div>
+        <div class="submenu">
+          <a href="#" class="link submenu-title">Settings</a>
+          <!-- submenu links here  -->
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ============= Home Section =============== -->
+  <!-- <section class="home">
+    <div class="toggle-sidebar">
+      <i class="bx bx-menu"></i>
+      <div class="text"></div>
+    </div>
+  </section> -->
+
+  <!-- Link JS -->
+  <div id="web-map" class="map"></div>
+  <script src="{% static '/libs/v6.15.1-dist/ol.js' %}"></script>
+  <script src="{% static '/js/basemap.js' %}"></script>
+  <script src="{% static '/js/drop.js' %}"></script>
+</body>
+
+</html>
